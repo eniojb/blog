@@ -5,3 +5,8 @@ app = Flask("Hello")
 @app.route("/")
 def hello():
     return "Hello World"
+
+
+    @app.route("/contatos")
+    def contato():
+        return "Enio J.Barboza, e-mail"
