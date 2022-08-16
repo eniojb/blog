@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask("Hello")
 
@@ -6,16 +6,15 @@ app = Flask("Hello")
 def hello():
     return "Hello World"
 
+@app.route("/usuario")
+def usuario():
+    usuario = [1, "Danilo de Souza Miguel", "Professor"]
+    alunos =["Andre","Lucas Santos","Alicia","Raiane"] 
+    return render_template("index.html", usuario = usuario, alunos = alunos)
+
 @app.route("/contatos")
 def contato():
-        return """<html>
-            <head>
-                <Contatos>
-            </head>
-            <body>
-                <h1>Enio J.Barboza</h1>
-                <h2>enio.email@email.com</h2>
-                <h3>Contato: 119999-9999</h3>
-            </body>
-        </html>"""
-    
+    nomeAula = "Aula python para Web"   
+    return render_template("index.html", nome = nomeAula)
+
+
