@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            <Contatos>
-        </title>
-    </head>
-    <body>
+{% extend 'base.html' %}
+    {% block content %}
+
         <a href="https//www.ocenbrasil.com/" target="_blank"> Clique para ir a oceanbrasil</a>
 
             {% if usuario[2] == "Prodessor"%}
@@ -22,5 +17,4 @@
         <h1>Enio J.Barboza</h1>
         <h2>enio.email@email.com</h2>
         <h3>Contato: 119999-9999</h3>
-    </body>
-</html>
+{% endblock %}

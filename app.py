@@ -9,7 +9,7 @@ def hello():
 @app.route("/usuario")
 def usuario():
     usuario = [1, "Danilo de Souza Miguel", "Professor"]
-    alunos =["Andre","Lucas Santos","Alicia","Raiane"] 
+    alunos =["Andre Guedes","Lucas Santos","Alicia Duarte","Raiane Carpline"] 
     return render_template("index.html", usuario = usuario, alunos = alunos)
 
 @app.route("/contatos")
