@@ -1,20 +1,18 @@
-{% extend 'base.html' %}
+{% extends "base.html" %}
     {% block content %}
+        {% for posts in posts %}
+            <article class="post">
+                <header>
+                    <div>
+                        <h1>{{ posts.title }}</h1>
+                        <div class="aboust">Criado por {{ posts['author'] }} em {{ posts['created'] }}</div> 
+                    </div>
+                </header>
+                <p class="body"> {{ posts['body'] }}</p>
+            </article>
+            {% if not loop.last %}
+            <hr>
+            {% endif %}
+        {% endfor %}
+    {% endblock%}
 
-        <a href="https//www.ocenbrasil.com/" target="_blank"> Clique para ir a oceanbrasil</a>
-
-            {% if usuario[2] == "Prodessor"%}
-                <h2>Bem vindo Professor</h2>
-            {%else}
-                <h2>Bem vindo Aluno</h2>
-            {%endif%}
-
-            {% for aluno in alunos %}
-            <h3>{{aluno}}</h3>
-            {%endfor%}
-
-        <h1> {{nome}} </h1>
-        <h1>Enio J.Barboza</h1>
-        <h2>enio.email@email.com</h2>
-        <h3>Contato: 119999-9999</h3>
-{% endblock %}

@@ -1,0 +1,35 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    background: #eee;
+}
+
+body{
+    max-width: 960;
+    margin: 0 auto;
+    background: white;
+}
+
+h1{
+    font-family: sans-serif;
+    color:blue;
+    margin: 0 auto;
+}
+
+hr{
+    border: solid;
+    border-top: 1px solid lightgray;
+} 
+
+.content{
+    padding: 0 5rem 10rem;
+}
+
+.post .about{
+    color: slategray;
+    font-style: italic;
+}
+
+.post .body{
+    white-space: pre-line;
+}
